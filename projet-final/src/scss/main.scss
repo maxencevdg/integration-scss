@@ -226,6 +226,7 @@ body {
             }
         }
         .boutton {
+            margin-top: 200px;
             button {
                 outline: none;
                 border: none;
@@ -362,7 +363,6 @@ body {
         }
 
         .container {
-            display: flex;
             @include center-box;
             font-size: 18px;
 
@@ -391,7 +391,6 @@ body {
         }
 
         .container {
-            display: flex;
             @include center-box;
             font-size: 18px;
 
@@ -418,6 +417,22 @@ body {
 
     .image {
         @include center-box;
+        position: relative;
+    }
+    .image::before, .image::after {
+        content: "";
+        position: absolute;
+        width: 87.5%;
+        height: 10px;
+        background: white;
+    }
+    
+    .image::before {
+        transform: rotate(90deg);
+    }
+    
+    .image::after {
+        transform: rotate(0deg);
     }
     .text {
         width: 80%;

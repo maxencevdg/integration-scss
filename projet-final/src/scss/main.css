@@ -414,6 +414,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.page6 .image::before, .page6 .image::after {
+  content: "";
+  position: absolute;
+  width: 87.5%;
+  height: 10px;
+  background: white;
+}
+.page6 .image::before {
+  transform: rotate(90deg);
+}
+.page6 .image::after {
+  transform: rotate(0deg);
 }
 .page6 .text {
   width: 80%;
